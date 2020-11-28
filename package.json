@@ -1,0 +1,26 @@
+{
+  "name": "icinga2api",
+  "version": "1.0.0",
+  "description": "NodeJS library for accessing the Icinga2 API",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrstnly/icinga2api.git"
+  },
+  "keywords": [
+    "icinga2"
+  ],
+  "author": "JR Stanley <jr@jrstn.ly>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jrstnly/icinga2api/issues"
+  },
+  "homepage": "https://github.com/jrstnly/icinga2api#readme",
+  "dependencies": {
+    "https": "^1.0.0",
+    "rxjs": "^6.6.3"
+  }
+}
