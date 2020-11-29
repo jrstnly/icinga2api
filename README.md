@@ -27,7 +27,27 @@ Returns a promise that resolves upon successful connection to the API.
 
 ## Methods
 
-#### [events(queue: string, types: array)](https://icinga.com/docs/icinga2/latest/doc/12-icinga2-api/#icinga2-api-event-streams)
+### Hosts
+
+##### [hosts.getHostGroups()](https://icinga.com/docs/icinga2/latest/doc/09-object-types/#hostgroup)
+
+Returns a promise that resolves with all host groups currently configured.
+
+```js
+const hostGroups = await icinga2.hosts.getHostGroups();
+```
+
+##### [hosts.getHosts()](https://icinga.com/docs/icinga2/latest/doc/09-object-types/#host)
+
+Returns a promise that resolves with all hosts currently configured.
+
+```js
+const hosts = await icinga2.hosts.getHosts();
+```
+
+### Events
+
+##### [events(queue: string, types: array)](https://icinga.com/docs/icinga2/latest/doc/12-icinga2-api/#icinga2-api-event-streams)
 
 Returns an observable that fires on every new event. Please refer to the Icinga2 documentation for information on queue and types values.
 
