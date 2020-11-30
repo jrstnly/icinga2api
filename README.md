@@ -29,21 +29,21 @@ Returns a promise that resolves upon successful connection to the API.
 
 ### Hosts
 
-##### [hosts.getHostGroups()](https://icinga.com/docs/icinga2/latest/doc/09-object-types/#hostgroup)
-
-Returns a promise that resolves with all host groups currently configured.
+##### [host().all()](https://icinga.com/docs/icinga2/latest/doc/09-object-types/#host)
 
 ```js
-const hostGroups = await icinga2.hosts.getHostGroups();
+const hosts = await icinga2.host().all();
 ```
-
-##### [hosts.getHosts()](https://icinga.com/docs/icinga2/latest/doc/09-object-types/#host)
 
 Returns a promise that resolves with all hosts currently configured.
 
+##### [host().groups()](https://icinga.com/docs/icinga2/latest/doc/09-object-types/#hostgroup)
+
 ```js
-const hosts = await icinga2.hosts.getHosts();
+const hostGroups = await icinga2.host().groups();
 ```
+
+Returns a promise that resolves with all host groups currently configured.
 
 ### Events
 

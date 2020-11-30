@@ -1,6 +1,6 @@
 const Rx = require('rxjs');
 const Utilities = require('./utilities');
-const Hosts = require('./hosts');
+const Host = require('./host');
 
 class Icinga2API {
 	#utilities = null;
@@ -32,8 +32,8 @@ class Icinga2API {
 		});
 	}
 
-	get hosts() {
-		return new Hosts(this.#options);
+	host(hostname = null) {
+		return new Host(this.#options, hostname);
 	}
 
 

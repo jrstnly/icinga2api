@@ -1,16 +1,18 @@
 const Utilities = require('./utilities');
 
-class Hosts {
+class Host {
 	#utilities = null;
 	#options = null;
+	#name = null;
 
-	constructor(options) {
+	constructor(options, host) {
 		this.#utilities = new Utilities;
 		this.#options = options;
+		this.#name = host;
 		return this;
 	}
 
-	async getHostGroups() {
+	async groups() {
 		return new Promise(async (resolve, reject) => {
 			const options = Object.assign({}, this.#options);
 			options.path += '/objects/hostgroups';
@@ -25,7 +27,7 @@ class Hosts {
 		});
 	}
 
-	async getHosts() {
+	async all() {
 		return new Promise(async (resolve, reject) => {
 			const options = Object.assign({}, this.#options);
 			options.path += '/objects/hosts';
@@ -42,4 +44,4 @@ class Hosts {
 
 }
 
-module.exports = Hosts;
+module.exports = Host;
